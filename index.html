@@ -9,7 +9,6 @@
   <meta http-equiv="Expires" content="0" />
   <style>
     :root {
-      /* LIGERAMENTE MÁS CLARO QUE pro13, manteniendo estilo metalizado */
       --fondo:#0f1620;
       --header1:#122131;
       --header2:#0f1b28;
@@ -42,18 +41,32 @@
       background: linear-gradient(180deg, var(--header1), var(--header2));
       color:var(--texto);
       text-align:center;
-      padding:14px 12px;
+      padding:18px 14px;
       box-shadow:0 14px 40px var(--sombra);
       position:sticky;top:0;z-index:20;
       border-bottom:1px solid var(--borde);
     }
-    .brand{display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap}
-    .brand-badge{display:grid;place-items:center;background:#ffffff;border-radius:14px;padding:6px 10px;min-width:120px;min-height:64px;box-shadow:0 6px 18px rgba(0,0,0,.28)}
-    .brand-badge img{max-height:56px;display:block}
+    .brand{display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap}
+    /* Bigger white badge behind logo for contrast */
+    .brand-badge{
+      display:grid;place-items:center;background:#ffffff;
+      border-radius:16px;
+      padding:10px 14px;
+      min-width:160px; min-height:96px;
+      box-shadow:0 10px 26px rgba(0,0,0,.30);
+      border:1px solid rgba(0,0,0,.05);
+    }
+    /* BIGGER LOGO */
+    .brand-badge img{max-height:88px;display:block}
+    /* On small screens, cap the logo height to avoid overflow */
+    @media (max-width: 520px){
+      .brand-badge{min-width:140px; min-height:86px; padding:8px 12px}
+      .brand-badge img{max-height:78px}
+    }
     .brand-fallback{font-weight:800;letter-spacing:.5px;color:#111}
-    h1{margin:6px 0 0 0;font-size:1.28rem}
+    h1{margin:6px 0 0 0;font-size:1.34rem}
     .layout{display:grid;grid-template-columns:280px 1fr 360px;gap:16px;max-width:1300px;margin:0 auto;padding:14px}
-    .left, .right{position:sticky;top:92px;height:calc(100vh - 114px)}
+    .left, .right{position:sticky;top:106px;height:calc(100vh - 128px)}
     .panel, .card{
       background: linear-gradient(180deg, var(--panel1), var(--panel2));
       border:1px solid var(--borde);
@@ -78,7 +91,7 @@
     .btn:hover{filter:brightness(1.08)}
     /* Lista izquierda */
     .module-item{display:flex;align-items:center;justify-content:space-between;gap:.6rem;background:rgba(255,255,255,.06);border:1px solid var(--borde);border-radius:10px;padding:.5rem .6rem;margin:.45rem 0}
-    .module-pill{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(180deg,var(--btn1),var(--btn2));color:#fff;font-weight:700;border-radius:999px;padding:.38rem .8rem;text-decoration:none;border:1px solid rgba(255,255,255,.2);font-size:.88rem;line-height:1}
+    .module-pill{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(180deg,var(--btn1),var(--btn2));color:#fff;font-weight:700;border-radius:999px;padding:.38rem .8rem;text-decoration:none;border:1px solid rgba(255,255,255,.2);font-size:.9rem;line-height:1}
     .open-btn{display:inline-block;background:linear-gradient(180deg,var(--btn1),var(--btn2));color:#fff;text-decoration:none;padding:var(--btn-pad-v) calc(var(--btn-pad-h) - .06rem);border-radius:8px;white-space:nowrap;font-size:var(--btn-font);border:1px solid rgba(255,255,255,.2);line-height:1}
     .open-btn:hover,.module-pill:hover{filter:brightness(1.12)}
     /* Acerca de Nosotros */

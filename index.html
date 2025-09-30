@@ -14,25 +14,27 @@
     }
     *{box-sizing:border-box}
     body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:var(--fondo);color:#222}
-    header{background:var(--azul);color:var(--blanco);text-align:center;padding:1rem 1rem;box-shadow:0 2px 8px var(--sombra);position:sticky;top:0;z-index:10}
+    header{background:var(--azul);color:var(--blanco);text-align:center;padding:1rem 1rem;box-shadow:0 2px 8px var(--sombra);position:sticky;top:0;z-index:20}
     .logo{max-height:46px;margin:auto;display:block}
     h1{margin:.5rem 0 0 0}
-    .wrap{max-width:1100px;margin:0 auto;padding:1rem}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
-    .card{background:#fff;border-radius:12px;box-shadow:0 2px 8px var(--sombra);padding:1rem}
+    .layout{display:grid;grid-template-columns:220px 1fr 240px;gap:14px;max-width:1300px;margin:0 auto;padding:1rem}
+    .left, .right{position:sticky;top:90px;height:calc(100vh - 110px)}
+    .panel{background:#fff;border-radius:12px;box-shadow:0 2px 10px var(--sombra);padding:.8rem;overflow:auto}
+    .left h4,.right h4{margin:.2rem .2rem .6rem;font-size:1rem}
+    .left a,.right a{display:block;text-decoration:none;color:#fff;background:var(--azul);padding:.5rem .6rem;border-radius:8px;margin:.35rem 0;font-size:.95rem}
+    .left a:hover,.right a:hover{background:var(--celeste)}
+    .left .list a{background:#fff;color:#222;border:1px solid #ddd}
+    .left .list a:hover{background:#f7f9fb}
+    .content{min-height:60vh}
+    .card{background:#fff;border-radius:12px;box-shadow:0 2px 8px var(--sombra);padding:1rem;margin-bottom:12px}
     .card h3{margin-top:0}
     .btn{display:inline-block;background:var(--azul);color:#fff;text-decoration:none;padding:.65rem 1rem;border-radius:8px;font-weight:600}
     .btn:hover{background:var(--celeste)}
-    .note{font-size:.9rem;color:#555;margin-top:.4rem}
-    /* Menú lateral derecho */
-    .side{position:fixed;right:0;top:50%;transform:translateY(-50%);background:var(--azul);padding:.6rem;border-radius:10px 0 0 10px;box-shadow:-2px 2px 12px var(--sombra);z-index:20}
-    .side a{display:block;color:#fff;text-decoration:none;margin:.35rem 0;padding:.5rem .7rem;border-radius:6px;font-size:.95rem}
-    .side a:hover{background:var(--celeste)}
     footer{margin-top:1rem;background:#ddd;padding:1rem;text-align:center;font-size:.9rem}
-    /* Responsive: que el menú lateral no tape en pantallas chicas */
-    @media (max-width: 640px){
-      .side{top:auto;bottom:0;left:0;right:0;transform:none;border-radius:10px 10px 0 0;display:flex;gap:.5rem;justify-content:center}
-      .side a{font-size:.9rem}
+    @media (max-width: 980px){
+      .layout{grid-template-columns:1fr}
+      .left,.right{position:relative;top:auto;height:auto}
+      .panel{margin-bottom:10px}
     }
   </style>
 </head>
@@ -43,66 +45,73 @@
     <p>Profesor: Julio Luchina · Coordinador: Christian Meneses</p>
   </header>
 
-  <!-- Menú lateral: accesos rápidos -->
-  <nav class="side" aria-label="Accesos rápidos">
-    <a href="https://www.youtube.com/playlist?list=PLXie0TBQEUrez660QPGUJLSl7MWqjkPSD" target="_blank">🔧 Softtech Hydro</a>
-    <a href="https://drive.google.com/drive/folders/1ZkRVmLe19DCprnZ7P7LSBx8IZNVSavOo" target="_blank">📂 Catálogos</a>
-  </nav>
-
-  <div class="wrap">
-    <section id="modulos">
-      <h2>📚 Módulos del Programa (8)</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>📑 Módulo 1 — Corredizas</h3>
-          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrcJmxfZfplVWXeOPgY79zw5">Abrir Módulo 1</a>
-          <p class="note">Playlist pública en YouTube.</p>
-        </div>
-        <div class="card">
-          <h3>📑 Módulo 2 — Rebatibles</h3>
-          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUre5jB-9H7_T6UD559e4jig8">Abrir Módulo 2</a>
-          <p class="note">Playlist pública en YouTube.</p>
-        </div>
-        <div class="card">
-          <h3>📑 Módulo 3 — Oscilobatiente + DVH</h3>
-          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrfC2bpaX19eIuhAgzRWUCcC">Abrir Módulo 3</a>
-          <p class="note">Playlist pública en YouTube.</p>
-        </div>
-        <div class="card">
-          <h3>📑 Módulo 4 — Proyectantes</h3>
-          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrdxxSIkd_49uWhKxrCbm8_F">Abrir Módulo 4</a>
-          <p class="note">Playlist pública en YouTube.</p>
-        </div>
-        <div class="card">
-          <h3>📑 Módulo 5 — Banderola</h3>
-          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrcL7z_mORKlUjVh1XolB49h">Abrir Módulo 5</a>
-          <p class="note">Playlist pública en YouTube.</p>
-        </div>
-        <div class="card">
-          <h3>📑 Módulo 6 — Mosquiteros</h3>
-          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrfibsuRIt93UTYwsLkGaX2-">Abrir Módulo 6</a>
-          <p class="note">Playlist pública en YouTube.</p>
-        </div>
-        <div class="card">
-          <h3>📑 Módulo 7 — Mamparas</h3>
-          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrc-jzmRPyMbAw-NVlu5horD">Abrir Módulo 7</a>
-          <p class="note">Playlist pública en YouTube.</p>
-        </div>
-        <div class="card">
-          <h3>📑 Módulo 8 — Softtech Hydro / Clase en vivo</h3>
-          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrez660QPGUJLSl7MWqjkPSD">Abrir Módulo 8</a>
-          <p class="note">Playlist pública en YouTube.</p>
-        </div>
+  <div class="layout">
+    <!-- Lateral IZQUIERDO: Lista de módulos -->
+    <aside class="left panel" aria-label="Índice de módulos">
+      <h4>📚 Módulos</h4>
+      <div class="list">
+        <a href="#m1">Módulo 1 — Corredizas</a>
+        <a href="#m2">Módulo 2 — Rebatibles</a>
+        <a href="#m3">Módulo 3 — Oscilobatiente + DVH</a>
+        <a href="#m4">Módulo 4 — Proyectantes</a>
+        <a href="#m5">Módulo 5 — Banderola</a>
+        <a href="#m6">Módulo 6 — Mosquiteros</a>
+        <a href="#m7">Módulo 7 — Mamparas</a>
+        <a href="#m8">Módulo 8 — Clase y Tutoriales en vivo</a>
       </div>
-    </section>
+    </aside>
 
-    <section id="contacto" style="margin-top:1rem">
-      <div class="card">
+    <!-- CONTENIDO CENTRAL -->
+    <main class="content" id="modulos">
+      <div class="card" id="m1">
+        <h3>📑 Módulo 1 — Corredizas</h3>
+        <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrcJmxfZfplVWXeOPgY79zw5">Abrir Módulo 1</a>
+      </div>
+      <div class="card" id="m2">
+        <h3>📑 Módulo 2 — Rebatibles</h3>
+        <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUre5jB-9H7_T6UD559e4jig8">Abrir Módulo 2</a>
+      </div>
+      <div class="card" id="m3">
+        <h3>📑 Módulo 3 — Oscilobatiente + DVH</h3>
+        <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrfC2bpaX19eIuhAgzRWUCcC">Abrir Módulo 3</a>
+      </div>
+      <div class="card" id="m4">
+        <h3>📑 Módulo 4 — Proyectantes</h3>
+        <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrdxxSIkd_49uWhKxrCbm8_F">Abrir Módulo 4</a>
+      </div>
+      <div class="card" id="m5">
+        <h3>📑 Módulo 5 — Banderola</h3>
+        <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrcL7z_mORKlUjVh1XolB49h">Abrir Módulo 5</a>
+      </div>
+      <div class="card" id="m6">
+        <h3>📑 Módulo 6 — Mosquiteros</h3>
+        <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrfibsuRIt93UTYwsLkGaX2-">Abrir Módulo 6</a>
+      </div>
+      <div class="card" id="m7">
+        <h3>📑 Módulo 7 — Mamparas</h3>
+        <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrc-jzmRPyMbAw-NVlu5horD">Abrir Módulo 7</a>
+      </div>
+      <div class="card" id="m8">
+        <h3>📑 Módulo 8 — Clase y Tutoriales en vivo</h3>
+        <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrez660QPGUJLSl7MWqjkPSD">Abrir Módulo 8</a>
+      </div>
+
+      <div class="card" id="contacto">
         <h3>📞 Contacto</h3>
         <p>Profesor: <strong>Julio Luchina</strong> — 096 444 333<br/>
         Coordinador: <strong>Christian Meneses</strong> — 099 925 303</p>
       </div>
-    </section>
+    </main>
+
+    <!-- Lateral DERECHO: Softtech (solo botón) + Catálogos -->
+    <aside class="right panel" aria-label="Accesos rápidos">
+      <h4>🔧 Softtech</h4>
+      <a href="https://www.youtube.com/playlist?list=PLXie0TBQEUrez660QPGUJLSl7MWqjkPSD" target="_blank">Abrir Softtech</a>
+      <hr>
+      <h4>📁 Catálogos y Software</h4>
+      <a href="https://drive.google.com/drive/folders/1ZkRVmLe19DCprnZ7P7LSBx8IZNVSavOo" target="_blank">Drive: Software y Catálogos</a>
+      <a href="http://689f9297c8e90.site123.me" target="_blank">Presentación y galería</a>
+    </aside>
   </div>
 
   <footer>

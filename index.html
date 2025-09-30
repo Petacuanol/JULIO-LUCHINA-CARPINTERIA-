@@ -12,106 +12,95 @@
       --blanco:#ffffff;
       --sombra:rgba(0,0,0,.1);
     }
+    *{box-sizing:border-box}
     body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:var(--fondo);color:#222}
-    header{background:var(--azul);color:var(--blanco);text-align:center;padding:1rem 1rem;box-shadow:0 2px 8px var(--sombra)}
+    header{background:var(--azul);color:var(--blanco);text-align:center;padding:1rem 1rem;box-shadow:0 2px 8px var(--sombra);position:sticky;top:0;z-index:10}
     .logo{max-height:46px;margin:auto;display:block}
     h1{margin:.5rem 0 0 0}
     .wrap{max-width:1100px;margin:0 auto;padding:1rem}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
-    .card{background:#fff;border-radius:12px;box-shadow:0 2px 8px var(--sombra);padding:1rem;text-align:center}
+    .card{background:#fff;border-radius:12px;box-shadow:0 2px 8px var(--sombra);padding:1rem}
     .card h3{margin-top:0}
-    .btn{display:inline-block;background:var(--azul);color:#fff;text-decoration:none;padding:.55rem .9rem;border-radius:8px}
+    .btn{display:inline-block;background:var(--azul);color:#fff;text-decoration:none;padding:.65rem 1rem;border-radius:8px;font-weight:600}
     .btn:hover{background:var(--celeste)}
-    iframe{width:100%;height:320px;border:0;border-radius:10px;box-shadow:0 2px 8px var(--sombra)}
-    section h2{margin:.5rem 0 .5rem}
-    footer{margin-top:1rem;background:#ddd;padding:1rem;text-align:center;font-size:.9rem}
     .note{font-size:.9rem;color:#555;margin-top:.4rem}
-    .list{background:#fff;border-radius:12px;box-shadow:0 2px 8px var(--sombra);padding:1rem}
-    ul{margin:.3rem 0 .2rem 1.1rem}
+    /* Menú lateral derecho */
+    .side{position:fixed;right:0;top:50%;transform:translateY(-50%);background:var(--azul);padding:.6rem;border-radius:10px 0 0 10px;box-shadow:-2px 2px 12px var(--sombra);z-index:20}
+    .side a{display:block;color:#fff;text-decoration:none;margin:.35rem 0;padding:.5rem .7rem;border-radius:6px;font-size:.95rem}
+    .side a:hover{background:var(--celeste)}
+    footer{margin-top:1rem;background:#ddd;padding:1rem;text-align:center;font-size:.9rem}
+    /* Responsive: que el menú lateral no tape en pantallas chicas */
+    @media (max-width: 640px){
+      .side{top:auto;bottom:0;left:0;right:0;transform:none;border-radius:10px 10px 0 0;display:flex;gap:.5rem;justify-content:center}
+      .side a{font-size:.9rem}
+    }
   </style>
 </head>
 <body>
   <header>
-    <!-- Si tu archivo es logo.svg, también funciona -->
     <img src="assets/logo.png" alt="Logo del curso" class="logo" onerror="this.onerror=null;this.src='assets/logo.svg'"/>
     <h1>Curso de Carpintería en Aluminio 2025</h1>
     <p>Profesor: Julio Luchina · Coordinador: Christian Meneses</p>
   </header>
 
+  <!-- Menú lateral: accesos rápidos -->
+  <nav class="side" aria-label="Accesos rápidos">
+    <a href="https://www.youtube.com/playlist?list=PLXie0TBQEUrez660QPGUJLSl7MWqjkPSD" target="_blank">🔧 Softtech Hydro</a>
+    <a href="https://drive.google.com/drive/folders/1ZkRVmLe19DCprnZ7P7LSBx8IZNVSavOo" target="_blank">📂 Catálogos</a>
+  </nav>
+
   <div class="wrap">
     <section id="modulos">
       <h2>📚 Módulos del Programa (8)</h2>
       <div class="grid">
-        <div class="card" id="m1">
+        <div class="card">
           <h3>📑 Módulo 1 — Corredizas</h3>
-          <iframe src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrcJmxfZfplVWXeOPgY79zw5" allowfullscreen></iframe>
-          <p class="note">Ver playlist completa dentro de la página o abrir en YouTube.</p>
-          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrcJmxfZfplVWXeOPgY79zw5">Abrir en YouTube</a>
+          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrcJmxfZfplVWXeOPgY79zw5">Abrir Módulo 1</a>
+          <p class="note">Playlist pública en YouTube.</p>
         </div>
-        <div class="card" id="m2">
+        <div class="card">
           <h3>📑 Módulo 2 — Rebatibles</h3>
-          <iframe src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUre5jB-9H7_T6UD559e4jig8" allowfullscreen></iframe>
-          <p class="note">Ver playlist completa dentro de la página o abrir en YouTube.</p>
-          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUre5jB-9H7_T6UD559e4jig8">Abrir en YouTube</a>
+          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUre5jB-9H7_T6UD559e4jig8">Abrir Módulo 2</a>
+          <p class="note">Playlist pública en YouTube.</p>
         </div>
-        <div class="card" id="m3">
+        <div class="card">
           <h3>📑 Módulo 3 — Oscilobatiente + DVH</h3>
-          <iframe src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrfC2bpaX19eIuhAgzRWUCcC" allowfullscreen></iframe>
-          <p class="note">Ver playlist completa dentro de la página o abrir en YouTube.</p>
-          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrfC2bpaX19eIuhAgzRWUCcC">Abrir en YouTube</a>
+          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrfC2bpaX19eIuhAgzRWUCcC">Abrir Módulo 3</a>
+          <p class="note">Playlist pública en YouTube.</p>
         </div>
-        <div class="card" id="m4">
+        <div class="card">
           <h3>📑 Módulo 4 — Proyectantes</h3>
-          <iframe src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrdxxSIkd_49uWhKxrCbm8_F" allowfullscreen></iframe>
-          <p class="note">Ver playlist completa dentro de la página o abrir en YouTube.</p>
-          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrdxxSIkd_49uWhKxrCbm8_F">Abrir en YouTube</a>
+          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrdxxSIkd_49uWhKxrCbm8_F">Abrir Módulo 4</a>
+          <p class="note">Playlist pública en YouTube.</p>
         </div>
-        <div class="card" id="m5">
+        <div class="card">
           <h3>📑 Módulo 5 — Banderola</h3>
-          <iframe src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrcL7z_mORKlUjVh1XolB49h" allowfullscreen></iframe>
-          <p class="note">Ver playlist completa dentro de la página o abrir en YouTube.</p>
-          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrcL7z_mORKlUjVh1XolB49h">Abrir en YouTube</a>
+          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrcL7z_mORKlUjVh1XolB49h">Abrir Módulo 5</a>
+          <p class="note">Playlist pública en YouTube.</p>
         </div>
-        <div class="card" id="m6">
+        <div class="card">
           <h3>📑 Módulo 6 — Mosquiteros</h3>
-          <iframe src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrfibsuRIt93UTYwsLkGaX2-" allowfullscreen></iframe>
-          <p class="note">Ver playlist completa dentro de la página o abrir en YouTube.</p>
-          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrfibsuRIt93UTYwsLkGaX2-">Abrir en YouTube</a>
+          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrfibsuRIt93UTYwsLkGaX2-">Abrir Módulo 6</a>
+          <p class="note">Playlist pública en YouTube.</p>
         </div>
-        <div class="card" id="m7">
+        <div class="card">
           <h3>📑 Módulo 7 — Mamparas</h3>
-          <iframe src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrc-jzmRPyMbAw-NVlu5horD" allowfullscreen></iframe>
-          <p class="note">Ver playlist completa dentro de la página o abrir en YouTube.</p>
-          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrc-jzmRPyMbAw-NVlu5horD">Abrir en YouTube</a>
+          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrc-jzmRPyMbAw-NVlu5horD">Abrir Módulo 7</a>
+          <p class="note">Playlist pública en YouTube.</p>
         </div>
-        <div class="card" id="m8">
+        <div class="card">
           <h3>📑 Módulo 8 — Softtech Hydro / Clase en vivo</h3>
-          <iframe src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrez660QPGUJLSl7MWqjkPSD" allowfullscreen></iframe>
-          <p class="note">Ver playlist completa dentro de la página o abrir en YouTube.</p>
-          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrez660QPGUJLSl7MWqjkPSD">Abrir en YouTube</a>
+          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrez660QPGUJLSl7MWqjkPSD">Abrir Módulo 8</a>
+          <p class="note">Playlist pública en YouTube.</p>
         </div>
       </div>
     </section>
 
-    <section id="catalogos">
-      <h2>📁 Catálogos y Software</h2>
-      <div class="list">
-        <p>Accedé a los materiales complementarios:</p>
-        <ul>
-          <li><a class="btn" target="_blank" href="https://drive.google.com/drive/folders/1ZkRVmLe19DCprnZ7P7LSBx8IZNVSavOo">📂 Software y Catálogos (Drive)</a></li>
-          <li><a class="btn" target="_blank" href="http://689f9297c8e90.site123.me">📸 Presentación y galería</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="proveedores">
-      <h2>🔧 Lista de Proveedores</h2>
-      <div class="list">
-        <ul>
-          <li><a class="btn" target="_blank" href="https://drive.google.com/file/d/1MN08T6q4ZnGSlGsoSOA5IEux3v-f43j/view">📄 Lista en Drive (versión compartida)</a></li>
-          <li><a class="btn" href="assets/proveedores-ejemplo.csv" download>⬇️ Descargar plantilla CSV (editala con tus contactos)</a></li>
-        </ul>
-        <p class="note">Tip: podés abrir el CSV en Excel/Google Sheets y reemplazar los datos por tus proveedores reales (por ejemplo: Aluminios del Uruguay, siliconas, herrajes, vidrierías, etc.).</p>
+    <section id="contacto" style="margin-top:1rem">
+      <div class="card">
+        <h3>📞 Contacto</h3>
+        <p>Profesor: <strong>Julio Luchina</strong> — 096 444 333<br/>
+        Coordinador: <strong>Christian Meneses</strong> — 099 925 303</p>
       </div>
     </section>
   </div>

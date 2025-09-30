@@ -9,18 +9,19 @@
   <meta http-equiv="Expires" content="0" />
   <style>
     :root {
-      --fondo:#070a0f;
-      --header1:#091521;
-      --header2:#07101a;
-      --panel1:#0b121a;
-      --panel2:#0a1118;
-      --borde:rgba(255,255,255,.09);
-      --texto:#e8eef5;
-      --texto-suave:#cfd7e0;
-      --btn1:#167199;
-      --btn2:#0e5270;
-      --accent:#12a4d9;
-      --sombra:rgba(0,0,0,.45);
+      /* LIGERAMENTE MÁS CLARO QUE pro13, manteniendo estilo metalizado */
+      --fondo:#0f1620;
+      --header1:#122131;
+      --header2:#0f1b28;
+      --panel1:#142131;
+      --panel2:#111c2a;
+      --borde:rgba(255,255,255,.12);
+      --texto:#eef3f8;
+      --texto-suave:#d7dde6;
+      --btn1:#1e7ea8;
+      --btn2:#165e7e;
+      --accent:#17b2ea;
+      --sombra:rgba(0,0,0,.38);
       --btn-font:.85rem;
       --btn-pad-v:.42rem;
       --btn-pad-h:.72rem;
@@ -31,10 +32,10 @@
       font-family:Segoe UI,Arial,sans-serif;
       color:var(--texto);
       background:
-        radial-gradient(1200px 800px at 20% -10%, rgba(255,255,255,.05), transparent 60%),
-        radial-gradient(1000px 600px at 120% 10%, rgba(255,255,255,.035), transparent 65%),
-        linear-gradient(180deg, var(--fondo), #06090d 45%, #05080b 100%),
-        repeating-linear-gradient(90deg, rgba(255,255,255,.04) 0, rgba(255,255,255,.04) 1px, transparent 1px, transparent 5px);
+        radial-gradient(1200px 800px at 20% -10%, rgba(255,255,255,.09), transparent 60%),
+        radial-gradient(1000px 600px at 120% 10%, rgba(255,255,255,.06), transparent 65%),
+        linear-gradient(180deg, var(--fondo), #0c121a 45%, #0b1016 100%),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.055) 0, rgba(255,255,255,.055) 1px, transparent 1px, transparent 5px);
       background-attachment: fixed;
     }
     header{
@@ -47,7 +48,7 @@
       border-bottom:1px solid var(--borde);
     }
     .brand{display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap}
-    .brand-badge{display:grid;place-items:center;background:#ffffff;border-radius:14px;padding:6px 10px;min-width:120px;min-height:64px;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+    .brand-badge{display:grid;place-items:center;background:#ffffff;border-radius:14px;padding:6px 10px;min-width:120px;min-height:64px;box-shadow:0 6px 18px rgba(0,0,0,.28)}
     .brand-badge img{max-height:56px;display:block}
     .brand-fallback{font-weight:800;letter-spacing:.5px;color:#111}
     h1{margin:6px 0 0 0;font-size:1.28rem}
@@ -57,11 +58,11 @@
       background: linear-gradient(180deg, var(--panel1), var(--panel2));
       border:1px solid var(--borde);
       border-radius:12px;
-      box-shadow:0 14px 40px var(--sombra);
+      box-shadow:0 12px 36px var(--sombra);
       padding:.85rem;
       overflow:auto;
     }
-    .card h3{margin-top:0;color:#f2f6fb}
+    .card h3{margin-top:0;color:#f6f9fd}
     .btn{
       display:inline-block;
       background:linear-gradient(180deg,var(--btn1),var(--btn2));
@@ -70,52 +71,44 @@
       padding:var(--btn-pad-v) var(--btn-pad-h);
       border-radius:8px;
       font-weight:600;
-      border:1px solid rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.15);
       font-size:var(--btn-font);
       line-height:1;
     }
-    .btn:hover{filter:brightness(1.1)}
+    .btn:hover{filter:brightness(1.08)}
     /* Lista izquierda */
-    .module-item{display:flex;align-items:center;justify-content:space-between;gap:.6rem;background:rgba(255,255,255,.03);border:1px solid var(--borde);border-radius:10px;padding:.5rem .6rem;margin:.45rem 0}
-    .module-pill{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(180deg,var(--btn1),var(--btn2));color:#fff;font-weight:700;border-radius:999px;padding:.38rem .8rem;text-decoration:none;border:1px solid rgba(255,255,255,.15);font-size:.88rem;line-height:1}
-    .open-btn{display:inline-block;background:linear-gradient(180deg,var(--btn1),var(--btn2));color:#fff;text-decoration:none;padding:var(--btn-pad-v) calc(var(--btn-pad-h) - .06rem);border-radius:8px;white-space:nowrap;font-size:var(--btn-font);border:1px solid rgba(255,255,255,.15);line-height:1}
+    .module-item{display:flex;align-items:center;justify-content:space-between;gap:.6rem;background:rgba(255,255,255,.06);border:1px solid var(--borde);border-radius:10px;padding:.5rem .6rem;margin:.45rem 0}
+    .module-pill{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(180deg,var(--btn1),var(--btn2));color:#fff;font-weight:700;border-radius:999px;padding:.38rem .8rem;text-decoration:none;border:1px solid rgba(255,255,255,.2);font-size:.88rem;line-height:1}
+    .open-btn{display:inline-block;background:linear-gradient(180deg,var(--btn1),var(--btn2));color:#fff;text-decoration:none;padding:var(--btn-pad-v) calc(var(--btn-pad-h) - .06rem);border-radius:8px;white-space:nowrap;font-size:var(--btn-font);border:1px solid rgba(255,255,255,.2);line-height:1}
     .open-btn:hover,.module-pill:hover{filter:brightness(1.12)}
     /* Acerca de Nosotros */
-    .about-card{position:relative;background:linear-gradient(135deg,#101a28 0%,#0b141f 100%);border:1px solid var(--borde);border-radius:14px;padding:14px 14px 14px 18px;box-shadow:0 16px 44px var(--sombra);margin-bottom:12px}
-    .about-card:before{content:'';position:absolute;left:0;top:0;bottom:0;width:8px;background:var(--accent);border-radius:14px 0 0 14px;box-shadow:0 0 18px rgba(18,164,217,.35)}
-    .about-card h3{margin:0 0 8px 0;color:#f2f6fb}
+    .about-card{position:relative;background:linear-gradient(135deg,#1a2a3c 0%,#152637 100%);border:1px solid var(--borde);border-radius:14px;padding:14px 14px 14px 18px;box-shadow:0 16px 44px var(--sombra);margin-bottom:12px}
+    .about-card:before{content:'';position:absolute;left:0;top:0;bottom:0;width:8px;background:var(--accent);border-radius:14px 0 0 14px;box-shadow:0 0 18px rgba(23,178,234,.35)}
+    .about-card h3{margin:0 0 8px 0;color:#f6f9fd}
     .about-card p{margin:.45rem 0;line-height:1.6;color:var(--texto-suave)}
     /* Programa */
     .programa{max-width:1300px;margin:8px auto 0;padding:0 14px 18px}
-    .programa h3{color:#f2f6fb}
+    .programa h3{color:#f6f9fd}
     .programa .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-    .programa .grid a{display:block;background:rgba(255,255,255,.03);border-radius:12px;box-shadow:0 14px 40px var(--sombra);overflow:hidden;border:1px solid var(--borde)}
+    .programa .grid a{display:block;background:rgba(255,255,255,.06);border-radius:12px;box-shadow:0 12px 34px var(--sombra);overflow:hidden;border:1px solid var(--borde)}
     .programa img{width:100%;height:auto;display:block}
     /* Floating "Volver arriba" */
     .to-top{
-      position:fixed;
-      bottom:18px; right:18px;
+      position:fixed; bottom:18px; right:18px;
       background:linear-gradient(180deg,var(--btn1),var(--btn2));
-      color:#fff;
-      text-decoration:none;
-      padding:.5rem .8rem;
-      border-radius:999px;
-      font-weight:700;
-      box-shadow:0 10px 30px var(--sombra);
-      border:1px solid rgba(255,255,255,.15);
-      opacity:0; pointer-events:none;
-      transform:translateY(8px);
-      transition:all .25s ease;
-      font-size:.9rem;
+      color:#fff; text-decoration:none;
+      padding:.5rem .8rem; border-radius:999px;
+      font-weight:700; box-shadow:0 10px 30px var(--sombra);
+      border:1px solid rgba(255,255,255,.2);
+      opacity:0; pointer-events:none; transform:translateY(8px);
+      transition:all .25s ease; font-size:.9rem;
     }
-    .to-top.show{
-      opacity:1; pointer-events:auto; transform:translateY(0);
-    }
+    .to-top.show{opacity:1; pointer-events:auto; transform:translateY(0);}
     @media (max-width: 1024px){
       .layout{grid-template-columns:1fr}
       .left,.right{position:relative;top:auto;height:auto}
     }
-    footer{background:linear-gradient(180deg,#0a131d,#070d15);margin-top:12px;padding:16px;text-align:center;font-size:.92rem;border-top:1px solid var(--borde)}
+    footer{background:linear-gradient(180deg,#121e2b,#0e1722);margin-top:12px;padding:16px;text-align:center;font-size:.92rem;border-top:1px solid var(--borde)}
   </style>
 </head>
 <body>

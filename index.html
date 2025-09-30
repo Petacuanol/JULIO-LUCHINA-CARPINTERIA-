@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Curso de Carpintería en Aluminio 2025</title>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" href="assets/logo.png">
   <style>
     :root {
       --azul:#004466;
@@ -43,6 +43,13 @@
     .access-card{background:#fff;border:1px solid #e6eef6;border-radius:14px;padding:1rem;box-shadow:0 6px 18px rgba(0,0,0,.06)}
     .access-card h4{margin:.2rem 0 .8rem 0}
     .access-card .btn{display:block;margin:.4rem 0;text-align:center}
+    /* Programa images */
+    .programa{max-width:1300px;margin:6px auto 0;padding:0 1rem 1rem}
+    .programa .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .programa .grid a{display:block;background:#fff;border-radius:12px;box-shadow:0 2px 8px var(--sombra);overflow:hidden;border:1px solid #e5e7eb}
+    .programa img{width:100%;height:auto;display:block}
+    .programa h3{margin:.5rem 0 .6rem}
+    @media (max-width: 900px){.programa .grid{grid-template-columns:1fr}}
     footer{margin-top:1rem;background:#ddd;padding:1rem;text-align:center;font-size:.9rem}
     @media (max-width: 1024px){
       .layout{grid-template-columns:1fr}
@@ -146,7 +153,7 @@
       </div>
     </main>
 
-    <!-- DERECHA: tarjeta "Acerca de Nosotros" con fondo profesional + Accesos -->
+    <!-- DERECHA -->
     <aside class="right">
       <div class="about-card">
         <h3 class="about-title">👥 Acerca de Nosotros</h3>
@@ -165,6 +172,14 @@
       </div>
     </aside>
   </div>
+
+  <!-- PROGRAMA (al pie) -->
+  <section class="programa" id="programa">
+    <h3>📋 Índice del Programa</h3>
+    <div class="grid">
+      <a href="assets/programa_1.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/programa_1.jpg" alt="Índice del programa 1"></a><a href="assets/programa_2.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/programa_2.jpg" alt="Índice del programa 2"></a><a href="assets/programa_3.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/programa_3.jpg" alt="Índice del programa 3"></a><a href="assets/programa_4.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/programa_4.jpg" alt="Índice del programa 4"></a>
+    </div>
+  </section>
 
   <footer>
     &copy; 2025 Curso Carpintería en Aluminio • Todos los derechos reservados

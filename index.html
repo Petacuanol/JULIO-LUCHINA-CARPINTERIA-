@@ -11,21 +11,13 @@
       --fondo:#f0f2f5;
       --blanco:#ffffff;
       --sombra:rgba(0,0,0,.1);
-      --c1:#0ea5e9; /* sky */
-      --c2:#22c55e; /* green */
-      --c3:#f97316; /* orange */
-      --c4:#a855f7; /* purple */
-      --c5:#ef4444; /* red */
-      --c6:#14b8a6; /* teal */
-      --c7:#eab308; /* yellow */
-      --c8:#3b82f6; /* blue */
     }
     *{box-sizing:border-box}
     body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:var(--fondo);color:#222}
     header{background:var(--azul);color:var(--blanco);text-align:center;padding:1rem 1rem;box-shadow:0 2px 8px var(--sombra);position:sticky;top:0;z-index:20}
     .logo{max-height:46px;margin:auto;display:block}
     h1{margin:.5rem 0 0 0}
-    .layout{display:grid;grid-template-columns:280px 1fr 220px;gap:16px;max-width:1300px;margin:0 auto;padding:1rem}
+    .layout{display:grid;grid-template-columns:280px 1fr 240px;gap:16px;max-width:1300px;margin:0 auto;padding:1rem}
     .left, .right{position:sticky;top:90px;height:calc(100vh - 110px)}
     .panel{background:#fff;border-radius:12px;box-shadow:0 2px 10px var(--sombra);padding:.9rem;overflow:auto}
     .panel h4{margin:.2rem .2rem .7rem;font-size:1rem}
@@ -35,19 +27,11 @@
     .btn{display:inline-block;background:var(--azul);color:#fff;text-decoration:none;padding:.65rem 1rem;border-radius:8px;font-weight:600}
     .btn:hover{background:var(--celeste)}
 
-    /* Left list items styled with color pills + button */
-    .module-item{display:flex;align-items:center;justify-content:space-between;gap:.6rem;background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:.5rem .6rem;margin:.45rem 0}
-    .module-pill{display:inline-flex;align-items:center;gap:.45rem;color:#fff;font-weight:600;border-radius:999px;padding:.35rem .7rem;text-decoration:none}
-    .open-btn{display:inline-block;background:var(--azul);color:#fff;text-decoration:none;padding:.45rem .65rem;border-radius:8px;white-space:nowrap;font-size:.9rem}
-    .open-btn:hover{background:var(--celeste)}
-    .pill-1{background:var(--c1)}
-    .pill-2{background:var(--c2)}
-    .pill-3{background:var(--c3)}
-    .pill-4{background:var(--c4)}
-    .pill-5{background:var(--c5)}
-    .pill-6{background:var(--c6)}
-    .pill-7{background:var(--c7); color:#222; font-weight:800}
-    .pill-8{background:var(--c8)}
+    /* Left uniform professional list */
+    .module-item{display:flex;align-items:center;justify-content:space-between;gap:.6rem;background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:.6rem .7rem;margin:.5rem 0}
+    .module-pill{display:inline-flex;align-items:center;gap:.5rem;background:var(--azul);color:#fff;font-weight:600;border-radius:999px;padding:.4rem .9rem;text-decoration:none}
+    .open-btn{display:inline-block;background:var(--azul);color:#fff;text-decoration:none;padding:.45rem .75rem;border-radius:8px;white-space:nowrap;font-size:.9rem}
+    .open-btn:hover,.module-pill:hover{background:var(--celeste)}
 
     footer{margin-top:1rem;background:#ddd;padding:1rem;text-align:center;font-size:.9rem}
     @media (max-width: 1024px){
@@ -65,40 +49,39 @@
   </header>
 
   <div class="layout">
-    <!-- LEFT: colored list with access buttons -->
+    <!-- LEFT: uniform professional list with access buttons -->
     <aside class="left panel" aria-label="Índice de módulos">
       <h4>📚 Módulos</h4>
-
       <div class="module-item">
-        <a class="module-pill pill-1" href="#m1" title="Ir a la sección">Módulo 1 — Corredizas</a>
+        <a class="module-pill" href="#m1" title="Ir a la sección">Módulo 1 — Corredizas</a>
         <a class="open-btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrcJmxfZfplVWXeOPgY79zw5">Abrir</a>
       </div>
       <div class="module-item">
-        <a class="module-pill pill-2" href="#m2">Módulo 2 — Rebatibles</a>
+        <a class="module-pill" href="#m2">Módulo 2 — Rebatibles</a>
         <a class="open-btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUre5jB-9H7_T6UD559e4jig8">Abrir</a>
       </div>
       <div class="module-item">
-        <a class="module-pill pill-3" href="#m3">Módulo 3 — Oscilobatiente + DVH</a>
+        <a class="module-pill" href="#m3">Módulo 3 — Oscilobatiente + DVH</a>
         <a class="open-btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrfC2bpaX19eIuhAgzRWUCcC">Abrir</a>
       </div>
       <div class="module-item">
-        <a class="module-pill pill-4" href="#m4">Módulo 4 — Proyectantes</a>
+        <a class="module-pill" href="#m4">Módulo 4 — Proyectantes</a>
         <a class="open-btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrdxxSIkd_49uWhKxrCbm8_F">Abrir</a>
       </div>
       <div class="module-item">
-        <a class="module-pill pill-5" href="#m5">Módulo 5 — Banderola</a>
+        <a class="module-pill" href="#m5">Módulo 5 — Banderola</a>
         <a class="open-btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrcL7z_mORKlUjVh1XolB49h">Abrir</a>
       </div>
       <div class="module-item">
-        <a class="module-pill pill-6" href="#m6">Módulo 6 — Mosquiteros</a>
+        <a class="module-pill" href="#m6">Módulo 6 — Mosquiteros</a>
         <a class="open-btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrfibsuRIt93UTYwsLkGaX2-">Abrir</a>
       </div>
       <div class="module-item">
-        <a class="module-pill pill-7" href="#m7">Módulo 7 — Mamparas</a>
+        <a class="module-pill" href="#m7">Módulo 7 — Mamparas</a>
         <a class="open-btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrc-jzmRPyMbAw-NVlu5horD">Abrir</a>
       </div>
       <div class="module-item">
-        <a class="module-pill pill-8" href="#m8">Módulo 8 — Clase y Tutoriales en vivo</a>
+        <a class="module-pill" href="#m8">Módulo 8 — Clase y Tutoriales en vivo</a>
         <a class="open-btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrez660QPGUJLSl7MWqjkPSD">Abrir</a>
       </div>
     </aside>
@@ -138,12 +121,11 @@
         <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrez660QPGUJLSl7MWqjkPSD">Abrir Módulo 8</a>
       </div>
 
-      <!-- Below: Separate section for Catalogs & Software -->
+      <!-- Separate section for Catalogs and Software below -->
       <div class="card" id="catalogos">
         <h3>📁 Catálogos y Software</h3>
         <p>Accedé a los materiales complementarios:</p>
         <p><a class="btn" target="_blank" href="https://drive.google.com/drive/folders/1ZkRVmLe19DCprnZ7P7LSBx8IZNVSavOo">Abrir Carpeta de Drive</a></p>
-        <p><a class="btn" target="_blank" href="http://689f9297c8e90.site123.me">Presentación y galería</a></p>
       </div>
 
       <div class="card" id="contacto">
@@ -153,10 +135,15 @@
       </div>
     </main>
 
-    <!-- RIGHT: only Softtech button (no videos) -->
+    <!-- RIGHT: Softtech + separate buttons for Catalogs, Software, Presentation & Gallery -->
     <aside class="right panel" aria-label="Accesos rápidos">
       <h4>🔧 Softtech</h4>
-      <a href="https://www.youtube.com/playlist?list=PLXie0TBQEUrez660QPGUJLSl7MWqjkPSD" target="_blank">Abrir Softtech</a>
+      <a class="btn" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrez660QPGUJLSl7MWqjkPSD" target="_blank">Abrir Softtech</a>
+      <hr>
+      <h4>📂 Accesos</h4>
+      <a class="btn" href="https://drive.google.com/drive/folders/1ZkRVmLe19DCprnZ7P7LSBx8IZNVSavOo" target="_blank">Catálogos</a>
+      <a class="btn" href="https://drive.google.com/drive/folders/1ZkRVmLe19DCprnZ7P7LSBx8IZNVSavOo" target="_blank">Software</a>
+      <a class="btn" href="http://689f9297c8e90.site123.me" target="_blank">Presentación y galería</a>
     </aside>
   </div>
 

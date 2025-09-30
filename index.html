@@ -4,147 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Curso de Carpintería en Aluminio 2025</title>
-
   <style>
-    :root {
-      --color-primario: #004466;
-      --color-secundario: #ffffff;
-      --color-fondo: #f0f2f5;
-      --sombra: rgba(0, 0, 0, 0.1);
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--color-fondo);
-      font-size: 15px;
-      overflow-x: hidden;
-    }
-
-    header {
-      background-color: var(--color-primario);
-      color: var(--color-secundario);
-      padding: 1.2rem;
-      text-align: center;
-      box-shadow: 0 2px 8px var(--sombra);
-    }
-
-    .logo {
-      max-height: 40px;
-      width: auto;
-      margin-bottom: 0.5rem;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .floating-menu {
-      position: fixed;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      background-color: var(--color-primario);
-      padding: 0.6rem;
-      border-radius: 8px 0 0 8px;
-      box-shadow: -2px 2px 10px var(--sombra);
-      z-index: 1000;
-    }
-    .floating-menu a {
-      display: block;
-      color: var(--color-secundario);
-      text-decoration: none;
-      margin: 0.4rem 0;
-      padding: 0.4rem 0.6rem;
-      border-radius: 4px;
-      font-size: 13px;
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-    .floating-menu a:hover {
-      background-color: #006699;
-      transform: scale(1.05);
-    }
-
-    .right-menu {
-      position: fixed;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      background-color: #006699;
-      padding: 0.6rem;
-      border-radius: 0 8px 8px 0;
-      box-shadow: 2px 2px 10px var(--sombra);
-      z-index: 1000;
-    }
-    .right-menu h4 {
-      font-size: 14px;
-      font-weight: bold;
-      color: var(--color-secundario);
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-    .right-menu a {
-      display: block;
-      color: var(--color-secundario);
-      text-decoration: none;
-      margin: 0.4rem 0;
-      padding: 0.4rem 0.6rem;
-      border-radius: 4px;
-      font-size: 13px;
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-    .right-menu a:hover {
-      background-color: #004466;
-      transform: scale(1.05);
-    }
-
-    .modulo {
-      padding: 1.2rem 1rem;
-      margin: 0.4rem auto;
-      max-width: 700px;
-      background-color: var(--color-secundario);
-      border-radius: 10px;
-      box-shadow: 0 2px 8px var(--sombra);
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-    .modulo:hover {
-      transform: translateY(-4px);
-    }
-    .modulo h3 {
-      margin-bottom: 0.5rem;
-      font-size: 17px;
-    }
-    .modulo a {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.4rem 0.8rem;
-      background-color: var(--color-primario);
-      color: var(--color-secundario);
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 13px;
-      transition: background 0.3s ease;
-    }
-    .modulo a:hover {
-      background-color: #006699;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #ddd;
-      font-size: 0.8rem;
-    }
-
-    @media (max-width: 600px) {
-      .logo { max-height: 30px; }
-      header h1 { font-size: 1.2rem; }
-      .floating-menu a,
-      .right-menu a {
-        font-size: 12px;
-        padding: 0.3rem 0.5rem;
-      }
-    }
+    body { font-family: Arial, sans-serif; margin: 0; background: #f0f2f5; }
+    header { background: #004466; color: white; text-align: center; padding: 1rem; }
+    .logo { max-height: 40px; margin: auto; display: block; }
+    .modulo { max-width: 800px; margin: 1rem auto; padding: 1rem; background: white;
+              border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; }
+    .modulo h3 { margin-bottom: 0.5rem; }
+    .modulo a { display: inline-block; margin-top: 0.5rem; background: #004466; color: white;
+                padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; }
+    .modulo a:hover { background: #006699; }
+    iframe { border: 0; max-width: 100%; }
+    footer { text-align: center; padding: 1rem; background: #ddd; font-size: 0.8rem; margin-top: 2rem; }
   </style>
 </head>
 <body>
@@ -154,78 +25,77 @@
     <p>Formación técnica con experiencia real en el oficio</p>
   </header>
 
-  <div class="floating-menu">
-    <a href="#modulo1">📑 Módulo 1</a>
-    <a href="#modulo2">📑 Módulo 2</a>
-    <a href="#modulo3">📑 Módulo 3</a>
-    <a href="#modulo4">📑 Módulo 4</a>
-    <a href="#modulo5">📑 Módulo 5</a>
-    <a href="#modulo6">📑 Módulo 6</a>
-    <a href="#modulo7">📑 Módulo 7</a>
-    <a href="#modulo8">📑 Módulo 8</a>
-    <hr>
-    <a href="#acerca">ℹ️ Nosotros</a>
-    <a href="#contacto">📞 Contacto</a>
-  </div>
-
-  <div class="right-menu">
-    <h4>Recursos</h4>
-    <a href="https://www.youtube.com/watch?v=oTngZviYXaU" target="_blank">🎬 Presentación</a>
-    <a href="https://drive.google.com/drive/folders/1ZkRVmLe19DCprnZ7P7LSBx8IZNVSavOo" target="_blank">📂 Software y Catálogos</a>
-    <a href="http://689f9297c8e90.site123.me" target="_blank">📸 Presentación y galería</a>
-    <a href="https://drive.google.com/file/d/1MN08T6q4ZnGSlGsoSOA5IEux3v-f43j/view" target="_blank">🔧 Proveedores</a>
-  </div>
-
   <main>
     <section id="modulo1" class="modulo">
-      <h3>📑 Módulo 1</h3>
-      <a href="https://www.youtube.com/playlist?list=PLSDdbML_8oVm7Pj20ubyomAJJXgQVZTYc" target="_blank">Ver módulo</a>
+      <h3>📑 Módulo 1 – Corredizas</h3>
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrcJmxfZfplVWXeOPgY79zw5"
+        allowfullscreen></iframe>
+      <br>
+      <a href="https://www.youtube.com/playlist?list=PLXie0TBQEUrcJmxfZfplVWXeOPgY79zw5" target="_blank">Abrir en YouTube</a>
     </section>
 
     <section id="modulo2" class="modulo">
-      <h3>📑 Módulo 2</h3>
-      <a href="https://www.youtube.com/playlist?list=PLSDdbML_8oVlEBTc5jkr7SryohimdJCTB" target="_blank">Ver módulo</a>
+      <h3>📑 Módulo 2 – Rebatibles</h3>
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUre5jB-9H7_T6UD559e4jig8"
+        allowfullscreen></iframe>
+      <br>
+      <a href="https://www.youtube.com/playlist?list=PLXie0TBQEUre5jB-9H7_T6UD559e4jig8" target="_blank">Abrir en YouTube</a>
     </section>
 
     <section id="modulo3" class="modulo">
-      <h3>📑 Módulo 3</h3>
-      <a href="https://www.youtube.com/playlist?list=PLSDdbML_8oVmKXHWt1wDAhdxpAMpiycVD" target="_blank">Ver módulo</a>
+      <h3>📑 Módulo 3 – Oscilobatiente + DVH</h3>
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrfC2bpaX19eIuhAgzRWUCcC"
+        allowfullscreen></iframe>
+      <br>
+      <a href="https://www.youtube.com/playlist?list=PLXie0TBQEUrfC2bpaX19eIuhAgzRWUCcC" target="_blank">Abrir en YouTube</a>
     </section>
 
     <section id="modulo4" class="modulo">
-      <h3>📑 Módulo 4</h3>
-      <a href="https://www.youtube.com/playlist?list=PLSDdbML_8oVmKXHWt1wDAhdxpAMpiycVD" target="_blank">Ver módulo</a>
+      <h3>📑 Módulo 4 – Proyectantes</h3>
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrdxxSIkd_49uWhKxrCbm8_F"
+        allowfullscreen></iframe>
+      <br>
+      <a href="https://www.youtube.com/playlist?list=PLXie0TBQEUrdxxSIkd_49uWhKxrCbm8_F" target="_blank">Abrir en YouTube</a>
     </section>
 
     <section id="modulo5" class="modulo">
-      <h3>📑 Módulo 5</h3>
-      <a href="https://www.youtube.com/playlist?list=PLSDdbML_8oVkEeUIV_ckQjLygDtdjW4Y" target="_blank">Ver módulo</a>
+      <h3>📑 Módulo 5 – Banderola</h3>
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrcL7z_mORKlUjVh1XolB49h"
+        allowfullscreen></iframe>
+      <br>
+      <a href="https://www.youtube.com/playlist?list=PLXie0TBQEUrcL7z_mORKlUjVh1XolB49h" target="_blank">Abrir en YouTube</a>
     </section>
 
     <section id="modulo6" class="modulo">
-      <h3>📑 Módulo 6</h3>
-      <a href="https://www.youtube.com/playlist?list=PLSDdbML_8oVmUzUZXx2mEapbX8zzPT-YW" target="_blank">Ver módulo</a>
+      <h3>📑 Módulo 6 – Mosquiteros</h3>
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrfibsuRIt93UTYwsLkGaX2-"
+        allowfullscreen></iframe>
+      <br>
+      <a href="https://www.youtube.com/playlist?list=PLXie0TBQEUrfibsuRIt93UTYwsLkGaX2-" target="_blank">Abrir en YouTube</a>
     </section>
 
     <section id="modulo7" class="modulo">
-      <h3>📑 Módulo 7</h3>
-      <a href="https://www.youtube.com/playlist?list=PLSDdbML_8oVn1MqQcBCO2dC0x3ETikSCY" target="_blank">Ver módulo</a>
+      <h3>📑 Módulo 7 – Mamparas</h3>
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrc-jzmRPyMbAw-NVlu5horD"
+        allowfullscreen></iframe>
+      <br>
+      <a href="https://www.youtube.com/playlist?list=PLXie0TBQEUrc-jzmRPyMbAw-NVlu5horD" target="_blank">Abrir en YouTube</a>
     </section>
 
     <section id="modulo8" class="modulo">
-      <h3>📑 Módulo 8</h3>
-      <a href="https://www.youtube.com/playlist?list=PLSDdbML_8oVnn9zI3eBBV4nQa9pSGQiGz" target="_blank">Ver módulo</a>
-    </section>
-
-    <section id="acerca" class="modulo">
-      <h3>ℹ️ Nosotros</h3>
-      <p>Profesor: Julio Luchina (096 444 333)<br>
-      Coordinador: Christian Meneses (099 925 303)</p>
-    </section>
-
-    <section id="contacto" class="modulo">
-      <h3>📞 Contacto</h3>
-      <p>Consultas e inscripciones vía WhatsApp o correo.</p>
+      <h3>📑 Módulo 8 – Softtech Hydro / Clase en vivo</h3>
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrez660QPGUJLSl7MWqjkPSD"
+        allowfullscreen></iframe>
+      <br>
+      <a href="https://www.youtube.com/playlist?list=PLXie0TBQEUrez660QPGUJLSl7MWqjkPSD" target="_blank">Abrir en YouTube</a>
     </section>
   </main>
 

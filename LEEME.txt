@@ -1,0 +1,7 @@
+# Publicación rápida
+
+1. Subí `index.html` y la carpeta `assets/` a tu repositorio.
+2. Activá GitHub Pages (Settings → Pages → Source: main → root).
+3. Si NO ves cambios, forzá recarga (Ctrl+F5) o abrí con `?v=2025` al final de la URL.
+
+El logo del header está incrustado como BASE64, por lo que **siempre** se ve sin depender de rutas.

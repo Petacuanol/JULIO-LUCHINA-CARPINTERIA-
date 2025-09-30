@@ -20,6 +20,8 @@
       --btn1:#1e7ea8;
       --btn2:#165e7e;
       --accent:#17b2ea;
+      --neon:#22e3ff;
+      --neon2:#6af0ff;
       --sombra:rgba(0,0,0,.38);
       --btn-font:.85rem;
       --btn-pad-v:.42rem;
@@ -47,7 +49,6 @@
       border-bottom:1px solid var(--borde);
     }
     .brand{display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap}
-    /* Bigger white badge behind logo for contrast */
     .brand-badge{
       display:grid;place-items:center;background:#ffffff;
       border-radius:16px;
@@ -56,14 +57,11 @@
       box-shadow:0 10px 26px rgba(0,0,0,.30);
       border:1px solid rgba(0,0,0,.05);
     }
-    /* BIGGER LOGO */
     .brand-badge img{max-height:88px;display:block}
-    /* On small screens, cap the logo height to avoid overflow */
     @media (max-width: 520px){
       .brand-badge{min-width:140px; min-height:86px; padding:8px 12px}
       .brand-badge img{max-height:78px}
     }
-    .brand-fallback{font-weight:800;letter-spacing:.5px;color:#111}
     h1{margin:6px 0 0 0;font-size:1.34rem}
     .layout{display:grid;grid-template-columns:280px 1fr 360px;gap:16px;max-width:1300px;margin:0 auto;padding:14px}
     .left, .right{position:sticky;top:106px;height:calc(100vh - 128px)}
@@ -94,17 +92,64 @@
     .module-pill{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(180deg,var(--btn1),var(--btn2));color:#fff;font-weight:700;border-radius:999px;padding:.38rem .8rem;text-decoration:none;border:1px solid rgba(255,255,255,.2);font-size:.9rem;line-height:1}
     .open-btn{display:inline-block;background:linear-gradient(180deg,var(--btn1),var(--btn2));color:#fff;text-decoration:none;padding:var(--btn-pad-v) calc(var(--btn-pad-h) - .06rem);border-radius:8px;white-space:nowrap;font-size:var(--btn-font);border:1px solid rgba(255,255,255,.2);line-height:1}
     .open-btn:hover,.module-pill:hover{filter:brightness(1.12)}
-    /* Acerca de Nosotros */
-    .about-card{position:relative;background:linear-gradient(135deg,#1a2a3c 0%,#152637 100%);border:1px solid var(--borde);border-radius:14px;padding:14px 14px 14px 18px;box-shadow:0 16px 44px var(--sombra);margin-bottom:12px}
-    .about-card:before{content:'';position:absolute;left:0;top:0;bottom:0;width:8px;background:var(--accent);border-radius:14px 0 0 14px;box-shadow:0 0 18px rgba(23,178,234,.35)}
-    .about-card h3{margin:0 0 8px 0;color:#f6f9fd}
-    .about-card p{margin:.45rem 0;line-height:1.6;color:var(--texto-suave)}
-    /* Programa */
-    .programa{max-width:1300px;margin:8px auto 0;padding:0 14px 18px}
-    .programa h3{color:#f6f9fd}
-    .programa .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-    .programa .grid a{display:block;background:rgba(255,255,255,.06);border-radius:12px;box-shadow:0 12px 34px var(--sombra);overflow:hidden;border:1px solid var(--borde)}
-    .programa img{width:100%;height:auto;display:block}
+    /* Programa (3D neon thumbs) */
+    .programa{max-width:1300px;margin:8px auto 0;padding:0 14px 22px}
+    .programa h3{color:#8be9ff; text-shadow:0 0 10px rgba(34,227,255,.35)}
+    .programa .grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:12px;
+    }
+    @media (max-width: 1100px){ .programa .grid{grid-template-columns:repeat(2, minmax(0,1fr));} }
+    @media (max-width: 640px){ .programa .grid{grid-template-columns:1fr;} }
+    .thumb3d{
+      text-decoration:none; color:inherit; display:block;
+    }
+    .card3d{
+      position:relative;
+      border-radius:14px;
+      overflow:hidden;
+      background:rgba(10,20,30,.8);
+      border:1px solid rgba(34,227,255,.45);
+      /* 3D + glow */
+      box-shadow:
+        0 4px 10px rgba(0,0,0,.35),
+        0 0 0 1px rgba(34,227,255,.55),
+        0 12px 28px rgba(34,227,255,.15),
+        0 30px 60px rgba(0,0,0,.35);
+      transform:translateZ(0);
+      transition:transform .25s cubic-bezier(.2,.7,.2,1), box-shadow .25s ease, filter .25s ease;
+    }
+    .card3d img{
+      width:100%;
+      aspect-ratio:16/9;
+      object-fit:cover;
+      display:block;
+      filter:contrast(1.08) saturate(1.05);
+      transition:transform .25s ease, filter .25s ease;
+    }
+    .card3d::before{
+      content:"";
+      position:absolute; inset:0;
+      background: radial-gradient(120% 90% at 10% 0%, rgba(34,227,255,.22), transparent 50%),
+                  linear-gradient(180deg, transparent 70%, rgba(34,227,255,.10));
+      pointer-events:none;
+    }
+    .thumb3d:hover .card3d{
+      transform:perspective(900px) rotateX(-3deg) rotateY(4deg) translateY(-3px) scale(1.02);
+      box-shadow:
+        0 8px 18px rgba(0,0,0,.45),
+        0 0 0 1px rgba(106,240,255,.75),
+        0 18px 48px rgba(34,227,255,.28),
+        0 40px 80px rgba(0,0,0,.45);
+      filter:brightness(1.03);
+    }
+    .thumb3d:hover .card3d img{filter:contrast(1.1) saturate(1.08)}
+    .caption{
+      display:block; text-align:center; margin-top:6px; font-size:.8rem; letter-spacing:.2px;
+      color:#bfefff;
+      text-shadow:0 0 8px rgba(34,227,255,.35);
+    }
     /* Floating "Volver arriba" */
     .to-top{
       position:fixed; bottom:18px; right:18px;
@@ -248,9 +293,18 @@
   <section class="programa" id="programa">
     <h3>📋 Índice del Programa</h3>
     <div class="grid">
-      <a href="assets/programa_1.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/programa_1.jpg" alt="Índice del programa 1"></a>
-      <a href="assets/programa_2.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/programa_2.jpg" alt="Índice del programa 2"></a>
-      <a href="assets/programa_3.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/programa_3.jpg" alt="Índice del programa (capacidad 40GB)"></a>
+      <a class="thumb3d" href="assets/programa_1.jpg" target="_blank" rel="noopener">
+        <div class="card3d"><img loading="lazy" src="assets/programa_1.jpg" alt="Índice del programa 1"></div>
+        <span class="caption">Índice 1</span>
+      </a>
+      <a class="thumb3d" href="assets/programa_2.jpg" target="_blank" rel="noopener">
+        <div class="card3d"><img loading="lazy" src="assets/programa_2.jpg" alt="Índice del programa 2"></div>
+        <span class="caption">Índice 2</span>
+      </a>
+      <a class="thumb3d" href="assets/programa_3.jpg" target="_blank" rel="noopener">
+        <div class="card3d"><img loading="lazy" src="assets/programa_3.jpg" alt="Índice del programa (capacidad 40GB)"></div>
+        <span class="caption">Índice 3</span>
+      </a>
     </div>
   </section>
 

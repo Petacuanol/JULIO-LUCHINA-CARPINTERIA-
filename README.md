@@ -1,34 +1,16 @@
-# Curso de Carpintería en Aluminio 2025
+# Curso de Carpintería en Aluminio – Paquete listo
+Incluye:
+- `index.html` con **títulos completos**, **botón** por módulo, **embeds** de YouTube.
+- Sección **Catálogos** (enlaces proporcionados).
+- Sección **Lista de Proveedores** con botón a Drive y archivo local `assets/proveedores-ejemplo.csv`.
+- Carpeta `assets/` con un **logo de ejemplo** (`logo.png` o `logo.svg`). Reemplázalo por el tuyo con el **mismo nombre**.
 
-Este repositorio contiene el material del **Curso de Carpintería en Aluminio**, con acceso a módulos en video, recursos adicionales y enlaces de referencia.
+## Publicación rápida
+1. Subí todo al repositorio en GitHub.
+2. Activá GitHub Pages (Settings > Pages > Source: main, Folder: /root).
+3. Abrí tu URL `https://TU_USUARIO.github.io/NOMBRE_REPO/`.
 
-## 📂 Contenido
-- `index.html`: Página principal del curso con acceso a los módulos y secciones de contacto.
-- `assets/`: Carpeta para almacenar imágenes y el logo del curso.
-
-## 🚀 Cómo usar
-1. Clonar este repositorio o descargar el archivo ZIP.
-2. Colocar un archivo de logo en la carpeta `assets/` con el nombre **logo.png**.
-3. Abrir el archivo `index.html` en un navegador web para ver el curso en local.
-4. Para publicarlo en línea:
-   - Subir el repositorio a **GitHub**.
-   - Activar **GitHub Pages** desde la pestaña *Settings > Pages*.
-   - Seleccionar la rama principal y la carpeta raíz `/`.
-   - El sitio quedará disponible en la URL: `https://tuusuario.github.io/curso-aluminio/`
-
-## 📑 Programa (8 Módulos)
-1. Corredizas  
-2. Rebatibles  
-3. Oscilobatiente + DVH  
-4. Proyectantes  
-5. Banderola  
-6. Mosquiteros  
-7. Mamparas  
-8. Softtech de Hydro / Clase en vivo
-
-## 📞 Contacto
-- Profesor: **Julio Luchina** (096 444 333)  
-- Coordinador: **Christian Meneses** (099 925 303)
-
----
-© 2025 Curso Carpintería en Aluminio • Todos los derechos reservados
+## Editables
+- Cambiar enlaces de YouTube si fuera necesario (en cada módulo).
+- Reemplazar logo dentro de `assets/`.
+- Abrir y editar `assets/proveedores-ejemplo.csv` con tus contactos reales.

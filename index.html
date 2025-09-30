@@ -5,99 +5,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Curso de Carpintería en Aluminio 2025</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f0f2f5; }
-    header { background: #004466; color: white; text-align: center; padding: 1rem; }
-    .logo { max-height: 40px; margin: auto; display: block; }
-    .modulo { max-width: 800px; margin: 1rem auto; padding: 1rem; background: white;
-              border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; }
-    .modulo h3 { margin-bottom: 0.5rem; }
-    .modulo a { display: inline-block; margin-top: 0.5rem; background: #004466; color: white;
-                padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; }
-    .modulo a:hover { background: #006699; }
-    iframe { border: 0; max-width: 100%; }
-    footer { text-align: center; padding: 1rem; background: #ddd; font-size: 0.8rem; margin-top: 2rem; }
+    :root {
+      --azul:#004466;
+      --celeste:#006699;
+      --fondo:#f0f2f5;
+      --blanco:#ffffff;
+      --sombra:rgba(0,0,0,.1);
+    }
+    body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:var(--fondo);color:#222}
+    header{background:var(--azul);color:var(--blanco);text-align:center;padding:1rem 1rem;box-shadow:0 2px 8px var(--sombra)}
+    .logo{max-height:46px;margin:auto;display:block}
+    h1{margin:.5rem 0 0 0}
+    .wrap{max-width:1100px;margin:0 auto;padding:1rem}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
+    .card{background:#fff;border-radius:12px;box-shadow:0 2px 8px var(--sombra);padding:1rem;text-align:center}
+    .card h3{margin-top:0}
+    .btn{display:inline-block;background:var(--azul);color:#fff;text-decoration:none;padding:.55rem .9rem;border-radius:8px}
+    .btn:hover{background:var(--celeste)}
+    iframe{width:100%;height:320px;border:0;border-radius:10px;box-shadow:0 2px 8px var(--sombra)}
+    section h2{margin:.5rem 0 .5rem}
+    footer{margin-top:1rem;background:#ddd;padding:1rem;text-align:center;font-size:.9rem}
+    .note{font-size:.9rem;color:#555;margin-top:.4rem}
+    .list{background:#fff;border-radius:12px;box-shadow:0 2px 8px var(--sombra);padding:1rem}
+    ul{margin:.3rem 0 .2rem 1.1rem}
   </style>
 </head>
 <body>
   <header>
-    <img src="assets/logo.png" alt="Logo Carpintería en Aluminio" class="logo" />
-    <h1>📘 Curso de Carpintería en Aluminio 2025</h1>
-    <p>Formación técnica con experiencia real en el oficio</p>
+    <!-- Si tu archivo es logo.svg, también funciona -->
+    <img src="assets/logo.png" alt="Logo del curso" class="logo" onerror="this.onerror=null;this.src='assets/logo.svg'"/>
+    <h1>Curso de Carpintería en Aluminio 2025</h1>
+    <p>Profesor: Julio Luchina · Coordinador: Christian Meneses</p>
   </header>
 
-  <main>
-    <section id="modulo1" class="modulo">
-      <h3>📑 Módulo 1 – Corredizas</h3>
-      <iframe width="560" height="315"
-        src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrcJmxfZfplVWXeOPgY79zw5"
-        allowfullscreen></iframe>
-      <br>
-      <a href="https://www.youtube.com/playlist?list=PLXie0TBQEUrcJmxfZfplVWXeOPgY79zw5" target="_blank">Abrir en YouTube</a>
+  <div class="wrap">
+    <section id="modulos">
+      <h2>📚 Módulos del Programa (8)</h2>
+      <div class="grid">
+        <div class="card" id="m1">
+          <h3>📑 Módulo 1 — Corredizas</h3>
+          <iframe src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrcJmxfZfplVWXeOPgY79zw5" allowfullscreen></iframe>
+          <p class="note">Ver playlist completa dentro de la página o abrir en YouTube.</p>
+          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrcJmxfZfplVWXeOPgY79zw5">Abrir en YouTube</a>
+        </div>
+        <div class="card" id="m2">
+          <h3>📑 Módulo 2 — Rebatibles</h3>
+          <iframe src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUre5jB-9H7_T6UD559e4jig8" allowfullscreen></iframe>
+          <p class="note">Ver playlist completa dentro de la página o abrir en YouTube.</p>
+          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUre5jB-9H7_T6UD559e4jig8">Abrir en YouTube</a>
+        </div>
+        <div class="card" id="m3">
+          <h3>📑 Módulo 3 — Oscilobatiente + DVH</h3>
+          <iframe src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrfC2bpaX19eIuhAgzRWUCcC" allowfullscreen></iframe>
+          <p class="note">Ver playlist completa dentro de la página o abrir en YouTube.</p>
+          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrfC2bpaX19eIuhAgzRWUCcC">Abrir en YouTube</a>
+        </div>
+        <div class="card" id="m4">
+          <h3>📑 Módulo 4 — Proyectantes</h3>
+          <iframe src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrdxxSIkd_49uWhKxrCbm8_F" allowfullscreen></iframe>
+          <p class="note">Ver playlist completa dentro de la página o abrir en YouTube.</p>
+          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrdxxSIkd_49uWhKxrCbm8_F">Abrir en YouTube</a>
+        </div>
+        <div class="card" id="m5">
+          <h3>📑 Módulo 5 — Banderola</h3>
+          <iframe src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrcL7z_mORKlUjVh1XolB49h" allowfullscreen></iframe>
+          <p class="note">Ver playlist completa dentro de la página o abrir en YouTube.</p>
+          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrcL7z_mORKlUjVh1XolB49h">Abrir en YouTube</a>
+        </div>
+        <div class="card" id="m6">
+          <h3>📑 Módulo 6 — Mosquiteros</h3>
+          <iframe src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrfibsuRIt93UTYwsLkGaX2-" allowfullscreen></iframe>
+          <p class="note">Ver playlist completa dentro de la página o abrir en YouTube.</p>
+          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrfibsuRIt93UTYwsLkGaX2-">Abrir en YouTube</a>
+        </div>
+        <div class="card" id="m7">
+          <h3>📑 Módulo 7 — Mamparas</h3>
+          <iframe src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrc-jzmRPyMbAw-NVlu5horD" allowfullscreen></iframe>
+          <p class="note">Ver playlist completa dentro de la página o abrir en YouTube.</p>
+          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrc-jzmRPyMbAw-NVlu5horD">Abrir en YouTube</a>
+        </div>
+        <div class="card" id="m8">
+          <h3>📑 Módulo 8 — Softtech Hydro / Clase en vivo</h3>
+          <iframe src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrez660QPGUJLSl7MWqjkPSD" allowfullscreen></iframe>
+          <p class="note">Ver playlist completa dentro de la página o abrir en YouTube.</p>
+          <a class="btn" target="_blank" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrez660QPGUJLSl7MWqjkPSD">Abrir en YouTube</a>
+        </div>
+      </div>
     </section>
 
-    <section id="modulo2" class="modulo">
-      <h3>📑 Módulo 2 – Rebatibles</h3>
-      <iframe width="560" height="315"
-        src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUre5jB-9H7_T6UD559e4jig8"
-        allowfullscreen></iframe>
-      <br>
-      <a href="https://www.youtube.com/playlist?list=PLXie0TBQEUre5jB-9H7_T6UD559e4jig8" target="_blank">Abrir en YouTube</a>
+    <section id="catalogos">
+      <h2>📁 Catálogos y Software</h2>
+      <div class="list">
+        <p>Accedé a los materiales complementarios:</p>
+        <ul>
+          <li><a class="btn" target="_blank" href="https://drive.google.com/drive/folders/1ZkRVmLe19DCprnZ7P7LSBx8IZNVSavOo">📂 Software y Catálogos (Drive)</a></li>
+          <li><a class="btn" target="_blank" href="http://689f9297c8e90.site123.me">📸 Presentación y galería</a></li>
+        </ul>
+      </div>
     </section>
 
-    <section id="modulo3" class="modulo">
-      <h3>📑 Módulo 3 – Oscilobatiente + DVH</h3>
-      <iframe width="560" height="315"
-        src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrfC2bpaX19eIuhAgzRWUCcC"
-        allowfullscreen></iframe>
-      <br>
-      <a href="https://www.youtube.com/playlist?list=PLXie0TBQEUrfC2bpaX19eIuhAgzRWUCcC" target="_blank">Abrir en YouTube</a>
+    <section id="proveedores">
+      <h2>🔧 Lista de Proveedores</h2>
+      <div class="list">
+        <ul>
+          <li><a class="btn" target="_blank" href="https://drive.google.com/file/d/1MN08T6q4ZnGSlGsoSOA5IEux3v-f43j/view">📄 Lista en Drive (versión compartida)</a></li>
+          <li><a class="btn" href="assets/proveedores-ejemplo.csv" download>⬇️ Descargar plantilla CSV (editala con tus contactos)</a></li>
+        </ul>
+        <p class="note">Tip: podés abrir el CSV en Excel/Google Sheets y reemplazar los datos por tus proveedores reales (por ejemplo: Aluminios del Uruguay, siliconas, herrajes, vidrierías, etc.).</p>
+      </div>
     </section>
-
-    <section id="modulo4" class="modulo">
-      <h3>📑 Módulo 4 – Proyectantes</h3>
-      <iframe width="560" height="315"
-        src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrdxxSIkd_49uWhKxrCbm8_F"
-        allowfullscreen></iframe>
-      <br>
-      <a href="https://www.youtube.com/playlist?list=PLXie0TBQEUrdxxSIkd_49uWhKxrCbm8_F" target="_blank">Abrir en YouTube</a>
-    </section>
-
-    <section id="modulo5" class="modulo">
-      <h3>📑 Módulo 5 – Banderola</h3>
-      <iframe width="560" height="315"
-        src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrcL7z_mORKlUjVh1XolB49h"
-        allowfullscreen></iframe>
-      <br>
-      <a href="https://www.youtube.com/playlist?list=PLXie0TBQEUrcL7z_mORKlUjVh1XolB49h" target="_blank">Abrir en YouTube</a>
-    </section>
-
-    <section id="modulo6" class="modulo">
-      <h3>📑 Módulo 6 – Mosquiteros</h3>
-      <iframe width="560" height="315"
-        src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrfibsuRIt93UTYwsLkGaX2-"
-        allowfullscreen></iframe>
-      <br>
-      <a href="https://www.youtube.com/playlist?list=PLXie0TBQEUrfibsuRIt93UTYwsLkGaX2-" target="_blank">Abrir en YouTube</a>
-    </section>
-
-    <section id="modulo7" class="modulo">
-      <h3>📑 Módulo 7 – Mamparas</h3>
-      <iframe width="560" height="315"
-        src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrc-jzmRPyMbAw-NVlu5horD"
-        allowfullscreen></iframe>
-      <br>
-      <a href="https://www.youtube.com/playlist?list=PLXie0TBQEUrc-jzmRPyMbAw-NVlu5horD" target="_blank">Abrir en YouTube</a>
-    </section>
-
-    <section id="modulo8" class="modulo">
-      <h3>📑 Módulo 8 – Softtech Hydro / Clase en vivo</h3>
-      <iframe width="560" height="315"
-        src="https://www.youtube.com/embed/videoseries?list=PLXie0TBQEUrez660QPGUJLSl7MWqjkPSD"
-        allowfullscreen></iframe>
-      <br>
-      <a href="https://www.youtube.com/playlist?list=PLXie0TBQEUrez660QPGUJLSl7MWqjkPSD" target="_blank">Abrir en YouTube</a>
-    </section>
-  </main>
+  </div>
 
   <footer>
     &copy; 2025 Curso Carpintería en Aluminio • Todos los derechos reservados

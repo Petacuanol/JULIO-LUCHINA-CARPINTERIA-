@@ -49,17 +49,26 @@
       border-bottom:1px solid var(--borde);
     }
     .brand{display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap}
+    /* METALLIC BADGE behind logo */
     .brand-badge{
-      display:grid;place-items:center;background:#ffffff;
+      display:grid;place-items:center;
       border-radius:16px;
-      padding:10px 14px;
-      min-width:160px; min-height:96px;
-      box-shadow:0 10px 26px rgba(0,0,0,.30);
-      border:1px solid rgba(0,0,0,.05);
+      padding:12px 16px;
+      min-width:180px; min-height:104px;
+      border:1px solid rgba(255,255,255,.35);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.35),
+        inset 0 -1px 0 rgba(0,0,0,.25),
+        0 10px 26px rgba(0,0,0,.3);
+      background:
+        radial-gradient(160% 120% at 20% 0%, rgba(255,255,255,.45), rgba(255,255,255,.08) 55%, transparent 70%),
+        radial-gradient(160% 120% at 80% 120%, rgba(0,0,0,.3), transparent 60%),
+        linear-gradient(180deg,#dfe4ea,#c9d0d8 40%,#b3bcc6 55%,#cfd6dd 70%,#aeb6bf 100%),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.15) 0, rgba(255,255,255,.15) 1px, rgba(0,0,0,.04) 1px, rgba(0,0,0,.04) 5px);
     }
-    .brand-badge img{max-height:88px;display:block}
+    .brand-badge img{max-height:88px;display:block;filter: drop-shadow(0 1px 0 rgba(255,255,255,.3))}
     @media (max-width: 520px){
-      .brand-badge{min-width:140px; min-height:86px; padding:8px 12px}
+      .brand-badge{min-width:150px; min-height:90px; padding:10px 12px}
       .brand-badge img{max-height:78px}
     }
     h1{margin:6px 0 0 0;font-size:1.34rem}
@@ -102,16 +111,13 @@
     }
     @media (max-width: 1100px){ .programa .grid{grid-template-columns:repeat(2, minmax(0,1fr));} }
     @media (max-width: 640px){ .programa .grid{grid-template-columns:1fr;} }
-    .thumb3d{
-      text-decoration:none; color:inherit; display:block;
-    }
+    .thumb3d{ text-decoration:none; color:inherit; display:block; }
     .card3d{
       position:relative;
       border-radius:14px;
       overflow:hidden;
       background:rgba(10,20,30,.8);
       border:1px solid rgba(34,227,255,.45);
-      /* 3D + glow */
       box-shadow:
         0 4px 10px rgba(0,0,0,.35),
         0 0 0 1px rgba(34,227,255,.55),

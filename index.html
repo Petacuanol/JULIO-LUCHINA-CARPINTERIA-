@@ -17,7 +17,7 @@
     header{background:var(--azul);color:var(--blanco);text-align:center;padding:1rem 1rem;box-shadow:0 2px 8px var(--sombra);position:sticky;top:0;z-index:20}
     .logo{max-height:46px;margin:auto;display:block}
     h1{margin:.5rem 0 0 0}
-    .layout{display:grid;grid-template-columns:280px 1fr 240px;gap:16px;max-width:1300px;margin:0 auto;padding:1rem}
+    .layout{display:grid;grid-template-columns:280px 1fr 280px;gap:16px;max-width:1300px;margin:0 auto;padding:1rem}
     .left, .right{position:sticky;top:90px;height:calc(100vh - 110px)}
     .panel{background:#fff;border-radius:12px;box-shadow:0 2px 10px var(--sombra);padding:.9rem;overflow:auto}
     .panel h4{margin:.2rem .2rem .7rem;font-size:1rem}
@@ -32,6 +32,11 @@
     .module-pill{display:inline-flex;align-items:center;gap:.5rem;background:var(--azul);color:#fff;font-weight:600;border-radius:999px;padding:.4rem .9rem;text-decoration:none}
     .open-btn{display:inline-block;background:var(--azul);color:#fff;text-decoration:none;padding:.45rem .75rem;border-radius:8px;white-space:nowrap;font-size:.9rem}
     .open-btn:hover,.module-pill:hover{background:var(--celeste)}
+
+    .about{font-size:.95rem;line-height:1.4;color:#1f2937}
+    .about p{margin:.5rem 0}
+    .about ul{margin:.4rem 0 .4rem 1.1rem}
+    .about li{margin:.25rem 0}
 
     footer{margin-top:1rem;background:#ddd;padding:1rem;text-align:center;font-size:.9rem}
     @media (max-width: 1024px){
@@ -135,10 +140,17 @@
       </div>
     </main>
 
-    <!-- RIGHT: Softtech + separate buttons for Catalogs, Software, Presentation & Gallery (HTTPS) -->
-    <aside class="right panel" aria-label="Accesos rápidos">
-      <h4>🔧 Softtech</h4>
-      <a class="btn" href="https://www.youtube.com/playlist?list=PLXie0TBQEUrez660QPGUJLSl7MWqjkPSD" target="_blank" rel="noopener noreferrer">Abrir Softtech</a>
+    <!-- RIGHT: About us + Accesos (no Softtech) -->
+    <aside class="right panel" aria-label="Acerca de Nosotros y Accesos">
+      <h4>👥 Acerca de Nosotros</h4>
+      <div class="about">
+        <p>Nuestro curso fue realizado con el fin de enseñar a principiantes en el rubro.</p>
+        <p>Para talleres y fábricas para la capacitación de personal.</p>
+        <p>Ideal para técnicos de la construcción, como aporte al conocimiento de la realización de aberturas de aluminio.</p>
+        <p>Además ofrecemos atención personalizada por consultas sobre el curso (nuevas líneas, nuevos accesorios y problemas de taller).</p>
+        <p>Podemos ofrecer charlas presenciales en fábricas y talleres.</p>
+        <p><strong>Contamos con 50 años de experiencia</strong> en el oficio y proyectos.</p>
+      </div>
       <hr>
       <h4>📂 Accesos</h4>
       <a class="btn" href="https://drive.google.com/drive/folders/1ZkRVmLe19DCprnZ7P7LSBx8IZNVSavOo" target="_blank" rel="noopener noreferrer">Catálogos</a>
